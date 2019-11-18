@@ -1,0 +1,7 @@
+<!--pages/home/imgshow/imgshow.wxml-->
+<view id="imgsection">
+  <view class="title">小程序显示图片</view>
+  <view class="imglist">
+    <image class="imgicon" src="/images/11.jpg"></image>
+  </view>
+</view>

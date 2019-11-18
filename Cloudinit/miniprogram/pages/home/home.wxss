@@ -1,0 +1,66 @@
+/* pages/home/home.wxss */
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.item-link {
+  margin: 20px;
+  padding: 10px 15px;
+  background-color: #4ea6ec;
+  color: #fff;
+  border-radius: 4px;
+}
+
+.item-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #c60;
+}
+
+.desc, .item-desc {
+  color: #333;
+}
+
+#wxmlinfo, #studyweapp {
+  font-size: 16px;
+  font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+#wxmlinfo, #studyweapp {
+  padding-top: 20px;
+  padding-right: 15px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+}
+
+.title, .item-title {
+  margin-bottom: 0.9em;
+}
+
+.item-title {
+  border-left: 3px solid #c60;
+  padding-left: 15px;
+}
+
+
+.list-item{
+  background-color: #82c2f7;
+  height: 100px;
+  text-align: center;
+  border:1px solid #bdd2f8;
+}
+
+.flex-box{
+  display: flex;
+}
+.list-item{
+  flex: 1;
+  align-items:center;/*垂直居中*/
+  justify-content: center;/*水平居中*/
+}
+
+

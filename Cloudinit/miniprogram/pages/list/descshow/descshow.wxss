@@ -1,0 +1,9 @@
+/* pages/list/descshow/descshow.wxss */
+.weui-article {
+  padding: 20px 15px;
+  font-size: 15px;
+}
+
+.hw__h3 {
+  color: #1772cb;
+}
