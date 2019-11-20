@@ -1,0 +1,113 @@
+<!--pages/my/my-template/my-template.wxml-->
+<!-- 模板 -->
+<import src="./../../../template/template.wxml" />
+<!-- 我的 -->
+<template name='my-01'>
+  <!-- 用户信息 -->
+  <template is='user-info-01' data="{{info}}" />
+  <!-- 选项卡 -->
+  <template is='nav-bar-01' data="{{info}}" />
+</template>
+<!-- 用户信息user-info-01 -->
+<template name='user-info-01'>
+  <view id='user-info-01'>
+    <view class='user-info'>
+      <image src='../../images/zhouqika01.png' class='bg-img'></image>
+      <view class='ui-box'>
+        <image class='u-img' src="{{info.appInfo.avatarUrl}}"></image>
+        <view class='u-name'>
+          <text>用户名：</text>
+          <text>{{info.appInfo.nickName}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='user-growth df-jc-sa'>
+      <view class='df-fw-w'>
+        <view class='ug-box'>
+          <text decode='{{true}}'>积分\t&nbsp;&nbsp;{{info.userInfo.pay_points}}</text>
+        </view>
+        <view class='ug-box'>
+          <text decode='{{true}}'>成长值\t&nbsp;&nbsp;{{info.userInfo.user_money}}</text>
+        </view>
+        <view class='ug-box'>
+          <text decode='{{true}}'>分享数量\t&nbsp;&nbsp;{{info.userInfo.son_sum}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>
+<!-- 我的导航卡nav-bar-01 -->
+<template name='nav-bar-01'>
+  <view id='nav-bar-01'>
+    <view class='top-share' bindtap='showShare'>
+      我要分享
+    </view>
+    <!-- <view class='top-share' bindtap='showShare'>
+      我要分享
+    </view> -->
+    <view class='nav-list' wx:for='{{info.navList}}' wx:key='key'>
+      <view class='nav-title'>{{item.title}}</view>
+      <view wx:if="{{item.state === 0}}" class='nav-functions df-fw-w'>
+        <block wx:for='{{item.functions}}' wx:key='key' wx:for-item='list'>
+          <navigator class='nav-functions-box' hover-class='none' url="{{list.url}}">
+            <image src='{{list.img}}'></image>
+            <text>\n{{list.text}}</text>
+          </navigator>
+        </block>
+      </view>
+
+      <!-- <view wx:if="{{item.state === 1}}" class='nav-functions'>
+        <block wx:for="{{info.funs01}}" wx:key="key">
+          <navigator class='nav-functions-boxs df-ai-c df-fw-w' hover-class='none' url="{{info.distributionStatus == '1' && item.id == '6' ? (info.appInfo.is_distribut == '1' ? info.userDistributor : (info.appInfo.distatus == 1 ? info.applyTime : info.distributorApplication)) :  item.path}}">
+            <image src='{{info.domain_img}}{{item.image}}'></image>
+            <text>{{item.name}}</text>
+          </navigator>
+        </block>
+        <block wx:for='{{item.functions}}' wx:key='key' wx:for-item='list'>
+          <navigator class='nav-functions-boxs df-ai-c df-fw-w' hover-class='none' url='{{list.url}}'>
+            <image src='{{list.img}}'></image>
+            <text>{{list.text}}</text>
+          </navigator>
+        </block>
+      </view> -->
+      
+      <view wx:else class='nav-functions'>
+        <block wx:for="{{info.funs}}" wx:key="key">
+          <navigator class='nav-functions-boxs df-ai-c df-fw-w' hover-class='none' url="{{info.distributionStatus == '1' && item.id == '6' ? (info.appInfo.is_distribut == '1' ? info.userDistributor : (info.appInfo.distatus == 1 ? info.applyTime : info.distributorApplication)) :  item.path}}">
+            <image src='{{info.domain_img}}{{item.image}}'></image>
+            <text>{{item.name}}</text>
+          </navigator>
+        </block>
+        <block wx:for="{{info.funs01}}" wx:key="key">
+          <navigator class='nav-functions-boxs df-ai-c df-fw-w' hover-class='none' url="{{info.distributionStatus == '1' && item.id == '6' ? (info.appInfo.is_distribut == '1' ? info.userDistributor : (info.appInfo.distatus == 1 ? info.applyTime : info.distributorApplication)) :  item.path}}">
+            <image src='{{info.domain_img}}{{item.image2}}'></image>
+            <text>{{item.name}}</text>
+          </navigator>
+        </block>
+        <block wx:for='{{item.functions}}' wx:key='key' wx:for-item='list'>
+          <navigator class='nav-functions-boxs df-ai-c df-fw-w' hover-class='none' url='{{list.url}}'>
+            <image src='{{list.img}}'></image>
+            <text>{{list.text}}</text>
+          </navigator>
+        </block>
+      </view>
+      
+    </view>
+    <view class='technical-support'>
+      <template is="technical-support" />
+    </view>
+  </view>
+  <template wx:if="{{info.shareFlag}}" is="my-share" />
+</template>
+<!-- 我要分享 -->
+<template name="my-share">
+  <view id='my-share'>
+    <view class='hint'>
+      <text>需要长按图片保存到相册，之后分享到朋友圈</text>
+      <view class='i-see' bindtap='iSee'>
+        <template is='orange-button' data="{{msg:'我知道了'}}" />
+      </view>
+    </view>
+    <view class='shade' catchtap='esc'></view>
+  </view>
+</template>

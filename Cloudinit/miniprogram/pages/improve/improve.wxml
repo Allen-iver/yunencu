@@ -1,0 +1,16 @@
+<!--pages/improve/improve.wxml-->
+<view class="improve_info">
+  <view class="improve_f" wx:if="{{!loadFlag}}">
+    <view class="improve_title">
+      您还尚未授权, 请点击按钮授权
+    </view>
+    <view class="improve_con">
+      <button class="improve_btn" open-type='getUserInfo' bindgetuserinfo='bindGetUserInfo'>点击授权</button>
+    </view>
+  </view>
+
+  <view class="improve_s" wx:else>
+    <image class="load" src="../../images/load.gif"></image>
+  </view>
+
+</view>

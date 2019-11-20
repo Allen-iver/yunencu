@@ -1,0 +1,5 @@
+<!--pages/my/my.wxml-->
+<import src='./my-template/my-template.wxml' />
+<view id='my' class='page-all'>
+  <template is='my-01' data="{{info}}" />
+</view>

@@ -1,0 +1,125 @@
+<!--template/template.wxml-->
+<!-- 提示格式列表 -->
+<template name='info-detail-list'>
+  <view id='info-detail-list'>
+    <view class='title'>
+      {{title}}
+    </view>
+    <view class='dl-info'>
+      <view class='w-80 dl-box df-jc-sb'>
+        <text>姓名</text>
+        <text>1111</text>
+      </view>
+      <view class='w-80 dl-box df-jc-sb'>
+        <text>身份证号</text>
+        <text>1111</text>
+      </view>
+      <view class='w-80 dl-box df-jc-sb'>
+        <text>联系方式</text>
+        <text>1111</text>
+      </view>
+      <view class='w-80 dl-box df-jc-sb'>
+        <text>银行卡号</text>
+        <text>1111</text>
+      </view>
+    </view>
+    <template is='yellow-button-gc' data="{{msg:'更改信息'}}" />
+    <image class='esc' src='./../../images/tuichutanchuang.png'></image>
+  </view>
+  <view class='shade'></view>
+</template>
+<!-- 技术支持 -->
+<template name='technical-support'>
+  <view id='technical-support'>
+    <image src='https://ticket.qingnianjuhe.cn/Public/newwximg/f24c484faf0012e0dc49e1e9093313d.png'></image>
+    <text>技术服务提供商</text>
+  </view>
+</template>
+<!-- 提示格式列表 -->
+<template name='detil-list'>
+  <view id='detil-list'>
+    <view class='title'>
+      {{title}}
+    </view>
+    <view class='dl-info'>
+      <block wx:for="{{list}}" wx:key='key'>
+        <view class='w-80 dl-box df-jc-sb'>
+          <text>￥{{item.price}}</text>
+          <text>{{item.time}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+  <view class='shade'></view>
+</template>
+<!-- 橘色渐变按钮 -->
+<template name="orange-button">
+  <view id='orange-button'>
+    {{msg}}
+  </view>
+</template>
+<!-- 浅红按钮 -->
+<template name='pale-red-botton'>
+  <view id='pale-red-botton'>
+    {{text}}
+  </view>
+</template>
+<!-- 黄底渐变按钮 -->
+<template name='yellow-button-gc'>
+  <view id='yellow-button-gc'>
+    {{msg}}
+  </view>
+</template>
+<!-- 黄底按钮 -->
+<template name='yellow-button'>
+  <view id='yellow-button'>
+    {{msg}}
+  </view>
+</template>
+<!-- 普通黑底半透明提示框 -->
+<template name="black-prompt">
+  <view id='black-prompt' wx:if="{{promptState}}">
+    {{msg}}
+  </view>
+</template>
+<!-- 点击确认取消提示框 -->
+<template name='popup-window'>
+  <view id='popup-window'>
+    <view class='title'>
+      提示
+    </view>
+    <view class='content'>
+      {{msg}}
+    </view>
+    <view class='confirm-cancel'>
+      <view class='cancel' bindtap='cancel'>
+        取消
+      </view>
+      <view class='line'>
+      </view>
+      <view class='fonfirm' bindtap='confirm'>
+        确定
+      </view>
+    </view>
+  </view>
+  <view id='mask'></view>
+</template>
+<!-- 白底提示框 -->
+<template name='white-ground'>
+  <view id='white-ground'>
+    <view class='wg-box'>
+      <text class='title'>{{title}}\n\n</text>
+      <text class='prompt-info'>{{list}}</text>
+      <view class='prb-click' bindtap='prbClick'>
+        <template is='pale-red-botton' data="{{text:'我知道了'}}" />
+      </view>
+    </view>
+    <view bindtap='bgEsc' class='bg'></view>
+  </view>
+</template>
+<!-- 暂无数据 -->
+<template name='no-data'>
+  <view id='no-data'>
+    <image src='https://ticket.qingnianjuhe.cn/Public/newwximg/nodata.png'></image>
+  </view>
+</template>

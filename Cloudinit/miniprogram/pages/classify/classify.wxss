@@ -1,0 +1,5 @@
+/* pages/classify/classify.wxss */
+/* pages/classify/ckassify.wxss */
+@import "./classify-template/classify-template";
+page{background-color: white;height: 100%;}
+#classify{height: 100%;}
