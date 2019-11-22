@@ -1,0 +1,57 @@
+<!--pages/goods-list/gl-template/gl-template.wxml-->
+<!-- 模板 -->
+<import src="./../../../template/template.wxml" />
+<!-- 商品列表模板 -->
+<!-- #goods-list-01 -->
+<template name='goods-list-01'>
+  <view id='goods-list-01'>
+    <view class='scroll-view df-jc-sb'>
+      <scroll-view scroll-x>
+        <view class='tab-bar'>
+          <block wx:for="{{info.array.list.sub_list}}" wx:key="key">
+            <text data-index='{{item.id}}' bindtap='queryClassify' class="{{item.id == info.listId ? 'sort-query' : '' || item.id == info.array.info.id ? 'sort-query' : ''}}">{{item.name}}</text>
+          </block>
+        </view>
+      </scroll-view>
+      <view class='sort df-jc-sa'>
+        <view class='mc df-ai-c' bindtap='sortShow'>
+          <text>{{info.sortArray[info.sortIndex].name}}</text>
+          <image class='icon' src='./../../images/paixu.png'></image>
+        </view>
+      </view>
+      <scroll-view wx:if="{{info.sortFlag}}" scroll-y class='sort-scroll-view'>
+        <block wx:for="{{info.sortArray}}" wx:key="key">
+          <view class="ssv-info {{index == classIndex ? 'sort-query' : ''}}" data-name='{{item}}' data-index='{{index}}' bindtap='querySort'>{{item.name}}</view>
+        </block>
+      </scroll-view>
+    </view>
+    <view class='goods w-85 df-jc-sb'>
+      <block wx:for="{{info.text != undefined ? info.array : info.array.list.type == 0 ? info.array.list.list : info.array.list.list}}" wx:key="key">
+        <navigator wx:if='{{info.array.list.type == 1}}' class='g-box' hover-class='none' url='/pages/goods-details/goods-details?id={{item.goods_id}}&status=2'>
+          <view class='g-in-box'>
+            <image src='{{info.domain_name}}{{item.original_img}}'></image>
+            <text class='goods-info replace'>{{item.goods_name}}</text>
+            <text class='goods-info replace'>{{item.goods_remark}}</text>
+            <view class='price'>
+              <text>￥{{item.shop_price}}</text>
+              <text>￥{{item.market_price}}</text>
+            </view>
+          </view>
+        </navigator>
+        <navigator wx:elif='{{info.array.list.type == 0}}' class='g-box' hover-class='none' url='/pages/goods-list/goods-list?id={{item.id}}&order=0'>
+          <view class='g-in-box'>
+            <image src='{{info.domain_name}}{{item.module_nimg}}'></image>
+            <!-- <text class='goods-info replace'>{{item.goods_name}}</text>
+            <text class='goods-info replace'>{{item.goods_remark}}</text>
+            <view class='price'>
+              <text>￥{{item.shop_price}}</text>
+              <text>￥{{item.market_price}}</text>
+            </view> -->
+          </view>
+        </navigator>
+      </block>
+    </view>
+    <!-- <template wx:if="{{info.array.list.list[info.classIndex].goods_list.length <= 0}}" is="no-data" /> -->
+    <template wx:if="{{info.array.list.list.length <= 0}}" is="no-data" />
+  </view>
+</template>

@@ -1,0 +1,3 @@
+/* pages/goods-list/goods-list.wxss */
+@import "./gl-template/gl-template.wxss";
+page{background-color: white;}
