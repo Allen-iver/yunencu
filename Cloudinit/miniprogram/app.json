@@ -1,5 +1,8 @@
 {
   "pages": [
+    "pages/home/home",
+    "pages/home/h-template/h-template",
+    "pages/index/index",
     "pages/shopping-cart/shopping-cart",
     "pages/shopping-cart/sc-template/sc-template",
     "pages/improve/improve",
@@ -9,7 +12,6 @@
     "pages/classify/classify-template/classify-template",
     "pages/my/my",
     "pages/my/my-template/my-template",
-    "pages/home/home",
     "pages/im/im",
     "pages/transition/transition",
     "pages/transform/transform",
@@ -18,8 +20,6 @@
     "pages/list/list",
     "pages/list/descshow/descshow",
     "pages/partner/partner",
-    "pages/index/index",
-    "pages/home/imgshow/imgshow",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
     "pages/databaseGuide/databaseGuide",
@@ -40,8 +40,8 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "color": "#7A7E83",
-    "selectedColor": "#orange",
+    "color": "#757575",
+    "selectedColor": "#fc5051",
     "backgroundColor": "#ffffff",
     "list": [
       {
@@ -53,19 +53,19 @@
       {
         "pagePath": "pages/classify/classify",
         "iconPath": "images/icon-tab2.png",
-        "selectedIconPath": "images/icon-tab2-active.png",
+        "selectedIconPath": "images/icon-tab1-active.png",
         "text": "分类"
       },
       {
-        "pagePath": "pages/partner/partner",
+        "pagePath": "pages/shopping-cart/shopping-cart",
         "iconPath": "images/icon-tab3.png",
-        "selectedIconPath": "images/icon-tab3-active.png",
+        "selectedIconPath": "images/icon-tab1-active.png",
         "text": "购物车"
       },
       {
         "pagePath": "pages/my/my",
         "iconPath": "images/icon-tab4.png",
-        "selectedIconPath": "images/icon-tab4-active.png",
+        "selectedIconPath": "images/icon-tab1-active.png",
         "text": "我的"
       }
     ]

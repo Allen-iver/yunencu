@@ -1,8 +1,4 @@
 {
   "usingComponents": {},
-  "navigationBarBackgroundColor": "#c60",
-  "navigationBarTextStyle": "white",
-  "navigationBarTitleText": "小程序页面",
-  "backgroundColor": "#eeeeee",
-  "backgroundTextStyle": "light"
+  "navigationBarTitleText": "千库商城"
 }

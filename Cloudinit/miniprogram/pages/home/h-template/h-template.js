@@ -1,4 +1,4 @@
-// pages/home/imgshow/imgshow.js
+// pages/home/h-template/h-template.js
 Page({
 
   /**

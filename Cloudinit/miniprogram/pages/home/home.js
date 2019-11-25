@@ -1,4 +1,6 @@
 // pages/home/home.js
+let app = getApp();
+const util = require('../../utils/util.js');
 Page({
 
   /**
@@ -12,8 +14,24 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let t = this;
+    t.topBanner();
 
   },
+
+  // 顶部轮播图
+  topBanner() {
+    let t = this;
+    t.setData({
+      'info.topBanner': [
+        { 'banner': '/images/banner01.jpg'},
+        { 'banner': '/images/banner01.jpg' },
+        { 'banner': '/images/banner01.jpg' },
+        { 'banner': '/images/banner01.jpg' }
+      ]
+    })
+  },
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成

@@ -1,0 +1,26 @@
+<!--pages/home/h-template/h-template.wxml-->
+<!-- 首页模板 -->
+<template name="indexM">
+  <view id="index_page">
+    <template is="lunboM" data="{{info}}" />
+  </view>
+</template>
+
+<!-- 轮播图模板 -->
+<template name="lunboM">
+  <view id="top-banner">
+    <view class="search_goods">
+      <input class="search_input" placeholder-class="place-holder" placeholder="搜索商品或店铺">
+        <image src="/images/search_icon.png"></image>
+        <!-- <text>搜索商品或店铺</text> -->
+      </input>
+    </view>
+    <swiper class='hp-banner' indicator-dots="true" circular='true' autoplay="true" interval="3000" duration="800">
+      <block wx:for="{{info.topBanner}}" wx:key='key'>
+        <swiper-item>
+          <image src='{{item.banner}}' data-imgsrc="{{item.banner}}" bindtap="getUrl"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+</template>
