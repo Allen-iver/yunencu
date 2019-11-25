@@ -1,0 +1,86 @@
+<!--pages/shopping-car/sc-template/sc-template.wxml-->
+<!-- 购物车shopping-car-01 -->
+<template name='shopping-car-01'>
+  <view id='shopping-car-01'>
+    <!-- 购物车暂无数据 -->
+    <template is='no-data-01' wx:if="{{info.carList.length <= 0}}" data="{{info}}" />
+    <!-- 购物车商品数据 -->
+    <template is='goods-list-01' data="{{info}}" />
+    <template wx:if="{{info.carList.length >= 1}}" is='total-01' data="{{info}}" />
+  </view>
+</template>
+<!-- 购物车暂无数据no-data-01 -->
+<template name='no-data-01'>
+  <view id='no-data-01'>
+    <view class='visit-the'>
+      <view class='bg'>
+        <image src='{{info.domain_img}}kou.png'></image>
+        <text>购物车空空如也~</text>
+      </view>
+      <navigator class='nav' hover-class='none' open-type='switchTab' url='/pages/classify/classify'>
+        去逛逛
+      </navigator>
+    </view>
+  </view>
+</template>
+<!-- 购物车商品信息 -->
+<template name='goods-list-01'>
+  <view id='goods-list-01'>
+    <block wx:for='{{info.carList}}' wx:key='key'>
+      <view class='g-box df-ai-c'>
+        <view class='icons' data-id='{{item.id}}' data-sele='{{item.selected}}' bindtap='clickChoose'>
+          <image class='icon' src="{{info.domain_img}}{{item.selected === '1' ? 'xuanzhong' : 'weixuan'}}.png"></image>
+        </view>
+        <view class='goods-img'>
+          <image src='{{item.image}}'></image>
+        </view>
+        <view class='goods-info replace' style='word-wrap:break-word;'>
+          <text>{{item.goods_name}}</text>
+          <text class='c5D5D5D'>\n{{item.goods_remark}}</text>
+          <view class='df-jc-sb df-ai-c'>
+            <text class='goods-price'>￥{{item.member_goods_price}}</text>
+            <view class='add-subtract df-ai-c'>
+              <view class='add' data-num='{{item.goods_num}}' data-id='{{item.id}}' data-state='减' bindtap='updateNum'>
+                -
+              </view>
+              <view class='num'>
+                {{item.goods_num}}
+              </view>
+              <view class='subtract' data-num='{{item.goods_num}}' data-id='{{item.id}}' data-state='加' bindtap='updateNum'>
+                +
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</template>
+<!-- 合计 -->
+<template name='total-01'>
+  <view id='total-01' class='df-ai-c bs-bb'>
+    <view class='check-all df-ai-c' data-sele="{{info.selected}}" bindtap='futureGenerationsThe'>
+      <image class='icon' src="{{info.domain_img}}{{info.selected === 1 ? 'xuanzhong' : 'weixuan'}}.png"></image>
+      <text class='c5D5D5D'>全选</text>
+    </view>
+    <view class='sd df-ai-c' data-del='batch' bindtap='promptBox'>
+      <image src='{{info.domain_img}}piliangshan.png'></image>
+      <text>删除</text>
+    </view>
+    <view class='price'>
+      <text>合计:\t￥{{info.total_fee.total_fee}}</text>
+    </view>
+    
+    <form bindsubmit="submitInfo" report-submit='true' bindtap='settleAccounts'>
+      <button class='form_button' form-type="submit">
+        <view class='submit'>
+          去结算\t
+        </view>
+      </button>
+    </form>
+
+    <!-- <view class='submit' bindtap='settleAccounts'>
+      去结算\t
+    </view> -->
+  </view>
+</template>

@@ -1,6 +1,16 @@
 {
   "pages": [
+    "pages/shopping-cart/shopping-cart",
+    "pages/shopping-cart/sc-template/sc-template",
+    "pages/improve/improve",
+    "pages/goods-list/goods-list",
+    "pages/goods-list/gl-template/gl-template",
+    "pages/classify/classify",
+    "pages/classify/classify-template/classify-template",
+    "pages/my/my",
+    "pages/my/my-template/my-template",
     "pages/home/home",
+    "pages/im/im",
     "pages/transition/transition",
     "pages/transform/transform",
     "pages/filter/filter",
@@ -8,7 +18,6 @@
     "pages/list/list",
     "pages/list/descshow/descshow",
     "pages/partner/partner",
-    "pages/more/more",
     "pages/index/index",
     "pages/home/imgshow/imgshow",
     "pages/userConsole/userConsole",
@@ -21,7 +30,6 @@
     "pages/openapi/serverapi/serverapi",
     "pages/openapi/callback/callback",
     "pages/openapi/cloudid/cloudid",
-    "pages/im/im",
     "pages/im/room/room"
   ],
   "window": {
@@ -43,10 +51,10 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/list/list",
+        "pagePath": "pages/classify/classify",
         "iconPath": "images/icon-tab2.png",
         "selectedIconPath": "images/icon-tab2-active.png",
-        "text": "活动"
+        "text": "分类"
       },
       {
         "pagePath": "pages/partner/partner",
@@ -55,7 +63,7 @@
         "text": "购物车"
       },
       {
-        "pagePath": "pages/more/more",
+        "pagePath": "pages/my/my",
         "iconPath": "images/icon-tab4.png",
         "selectedIconPath": "images/icon-tab4-active.png",
         "text": "我的"

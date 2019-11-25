@@ -10,7 +10,7 @@
     <!-- 商品分类 -->
     <view class='df-jc-sb bs-bb classify-info'>
       <template is='left-classify-01' data="{{info}}" />
-      <template wx:if="{{info.leftClass.list.level1[0].level2.type === 1}}" is='right-goods-info-01' data="{{info}}" />
+      <template wx:if="{{info.leftClass.list.level1[0].level2.type == 1}}" is='right-goods-info-01' data="{{info}}" />
       <template wx:else is='right-goods-info-02' data="{{info}}" />
     </view>
   </view>
@@ -45,7 +45,7 @@
       <view class='rgi-box df-jc-sb'>
         <block wx:for="{{info.leftClass.list.level1[0].level2.list}}" wx:key="key">
           <navigator class='info replace' hover-class='none' url='/pages/goods-details/goods-details?id={{item.goods_id}}&status=2'>
-            <image src='{{info.domain_name}}{{item.original_img}}'></image>
+            <image src='{{item.original_img}}'></image>
             <text>\n{{item.goods_name}}</text>
           </navigator>
         </block>
@@ -63,7 +63,7 @@
             <text>{{obj.name}}</text>
             <view class='df-ai-c'>
               <text>更多</text>
-              <image class='icon' src='{{info.domain_img}}youheijiantou01.png'></image>
+              <image class='icon' src='../../images/youhuijiantou01.png'></image>
             </view>
           </navigator>
           <view class='info-box df-jc-sb'>

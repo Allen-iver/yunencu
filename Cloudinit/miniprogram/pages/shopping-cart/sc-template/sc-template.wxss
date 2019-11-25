@@ -1,0 +1,120 @@
+/* pages/shopping-car/sc-template/sc-template.wxss */
+/* 购物车暂无数据 */
+#no-data-01{
+  text-align: center;
+}
+#no-data-01 .bg{
+  line-height: 90rpx;
+  margin-top: 80rpx;
+  color: #979797;
+}
+#no-data-01 .bg image{
+  width: 100rpx;
+  height: 100rpx;
+  display: block;
+  margin: 0 auto;
+}
+#no-data-01 .nav{
+  background-color: rgb(249,194,95);
+  color: white;
+  width: 250rpx;
+  height: 65rpx;
+  line-height: 65rpx;
+  border-radius: 10rpx;
+  margin: 20rpx auto;
+}
+/* 商品信息 */
+#goods-list-01 .g-box{
+  height: 235rpx;
+  background-color: white;
+  margin-top: 20rpx;
+}
+#goods-list-01 .g-box .icons{
+  height: 100%;
+  position: relative;
+  width: 135rpx;
+}
+#goods-list-01 .g-box .icons image{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 50rpx;
+  height: 50rpx;
+}
+#goods-list-01 .goods-img image{
+  width: 150rpx;
+  height: 150rpx;
+}
+#goods-list-01 .goods-info{
+  height: 150rpx;
+  width: 375rpx;
+  margin-left: 40rpx;
+  line-height: 50rpx;
+  font-size: 20rpx;
+}
+#goods-list-01 .add-subtract{
+  margin-right: 15rpx;
+  border: 1rpx solid #ABABAB;
+  height: 40rpx;
+}
+#goods-list-01 .add-subtract .add{
+  border-right: 1rpx solid #ABABAB;
+}
+#goods-list-01 .add-subtract .subtract{
+  border-left: 1rpx solid #ABABAB;
+}
+#goods-list-01 .add-subtract .add,#goods-list-01 .add-subtract .subtract{
+  padding: 0 20rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+#goods-list-01 .add-subtract .num{
+  padding: 0 20rpx;
+}
+#goods-list-01 .goods-price{
+  color: #E21D15;
+}
+/* 合计#total-01 */
+#total-01{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  height: 100rpx;
+  padding-left: 50rpx;
+}
+
+#total-01 .c5D5D5D{
+  font-size: 22rpx;
+  margin-left: 10rpx;
+}
+#total-01 .price{
+  margin-left: 50rpx;
+}
+#total-01 form button .submit{
+  background-color: rgb(244,145,46);
+  color: white;
+  text-align: center;
+  height: 100%;
+  font-size: 30rpx;
+  line-height: 100rpx;
+  width: 200rpx;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+#total-01 .sd{
+  margin-left: 35rpx;
+}
+#total-01 .sd image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 15rpx;
+}
+#total-01 .icon{width: 50rpx;height: 50rpx;}
+
+button.form_button{background-color:transparent;padding:0;margin:0;display:inline;position:static;border:0;padding-left:0;padding-right:0;border-radius:0;font-size:0rpx;color:transparent;}
+button.form_button::after{content:'';width:0;height:0;-webkit-transform:scale(1);transform:scale(1);display:none;background-color:transparent;}

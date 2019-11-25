@@ -1,11 +1,17 @@
 /**app.wxss**/
 @import 'style/weui.wxss';
+@import "./template/template.wxss";
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
 } 
+
+.page-all {
+  font-size: 24rpx;
+  color: #000;
+}
 
 button {
   background: initial;
@@ -18,6 +24,137 @@ button:focus{
 button::after{
   border: none;
 }
+
+
+/* 所有页面样式 */
+page{
+  background-color:#EFEEEE;
+}
+image {
+  vertical-align: top;
+}
+.bs-bb {
+  box-sizing: border-box;
+}
+.page-all {
+  font-size: 24rpx;
+  color: #000;
+}
+
+.replace {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bg-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.shade {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: black;
+  opacity: 0.85;
+}
+.lucency{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.pa-center{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+/* 到底啦样式 */
+.whether-the{color: rgb(102,102,102);font-size: 30rpx;text-align: center;margin-top: 35rpx;}
+/* 宽度并居中 */
+
+.w-70 {
+  width: 70%;
+  margin: 0 auto;
+}
+.w-80{
+  width: 80%;
+  margin: 0 auto;
+}
+.w-85{
+  width: 85%;
+  margin: 0 auto;
+}
+.w-90{
+  width: 90%;
+  margin: 0 auto;
+}
+.w-95{
+  width: 95%;
+  margin: 0 auto;
+}
+
+/* 弹性盒子 */
+
+.df-jc-sb {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  
+}
+
+.df-ai-c {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.df-fw-w {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.df-jc-sa {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.df-fd-cr {
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: column-reverse;
+}
+
+.df-fd-c {
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: column;
+}
+
+.df-jc-fe {
+  display: flex;
+  justify-content: flex-end;
+}
+
 
 
 page {
