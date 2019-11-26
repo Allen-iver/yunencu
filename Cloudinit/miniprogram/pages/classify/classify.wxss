@@ -1,5 +1,6 @@
 /* pages/classify/classify.wxss */
-/* pages/classify/ckassify.wxss */
-@import "./classify-template/classify-template";
+@import './classify-template/classify-template.wxss';
 page{background-color: white;height: 100%;}
-#classify{height: 100%;}
+#classify { width: 100%; height: 100%; }
+
+

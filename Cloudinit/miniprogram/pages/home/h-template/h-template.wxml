@@ -1,8 +1,15 @@
 <!--pages/home/h-template/h-template.wxml-->
+<import src="/template/template.wxml" />
 <!-- 首页模板 -->
 <template name="indexM">
   <view id="index_page">
     <template is="lunboM" data="{{info}}" />
+    <template is="jianju" />
+    <template is="tool_list" data="{{info}}" />
+    <template is="jianju" />
+    <template is="secondLevelList" data="{{info}}" />
+    <template is="jianju" />
+    <template is="is-goods-list" data="{{info}}" />
   </view>
 </template>
 
@@ -10,10 +17,9 @@
 <template name="lunboM">
   <view id="top-banner">
     <view class="search_goods">
-      <input class="search_input" placeholder-class="place-holder" placeholder="搜索商品或店铺">
-        <image src="/images/search_icon.png"></image>
-        <!-- <text>搜索商品或店铺</text> -->
-      </input>
+      <input class="search_input" placeholder-class="place-holder" placeholder="搜索商品或店铺" />
+      <image src="/images/search_icon.png"></image>
+      <!-- <text>搜索商品或店铺</text> -->
     </view>
     <swiper class='hp-banner' indicator-dots="true" circular='true' autoplay="true" interval="3000" duration="800">
       <block wx:for="{{info.topBanner}}" wx:key='key'>
@@ -24,3 +30,34 @@
     </swiper>
   </view>
 </template>
+
+<!-- 功能列表 -->
+<template name="tool_list">
+  <view id="tool_list" class="df-jc-sb">
+    <block wx:for="{{info.toolLists}}" wx:key="key">
+      <navigator class="each_tool" data-id="{{item.id}}" hover-class="none">
+        <image src="{{item.menuUrl}}"></image>
+        <text>{{item.menuName}}</text>
+      </navigator>
+    </block>
+  </view>
+</template>
+
+<!-- 二级商品介绍 -->
+<template name="secondLevelList">
+  <view class="sec-level-list df-jc-sb">
+    <block wx:for="{{info.secLevelList}}" wx:key="key">
+      <navigator class="each-sec-list" hover-class="none" data-id="{{item.id}}" style="background: {{item.bgColor}}">
+        <text class="goods-name">{{item.toolName}}</text>
+        <text class="goods-desc"  style="color: {{item.fontColor}}">{{item.tooldesc}}</text>
+        <image src="{{item.toolUrl}}" class="goods-img"></image>
+      </navigator>
+    </block>
+  </view>
+</template>
+
+<!-- 间距 -->
+<template name="jianju">
+  <view class="jianju"></view>
+</template>
+

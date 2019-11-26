@@ -1,8 +1,6 @@
 <!--pages/classify/classify.wxml-->
 <!-- 模板 -->
-<import src="./../../template/template.wxml" />
-<!-- 分类模板 -->
 <import src="./classify-template/classify-template.wxml" />
-<view id='classify' class='page-all'>
-  <template is='classify-01' data="{{info}}" />
+<view id="classify">
+  <template is="classifyModule" data="{{info}}" />
 </view>

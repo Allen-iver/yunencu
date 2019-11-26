@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/classify/classify",
     "pages/home/home",
     "pages/home/h-template/h-template",
     "pages/index/index",
@@ -8,7 +9,6 @@
     "pages/improve/improve",
     "pages/goods-list/goods-list",
     "pages/goods-list/gl-template/gl-template",
-    "pages/classify/classify",
     "pages/classify/classify-template/classify-template",
     "pages/my/my",
     "pages/my/my-template/my-template",
@@ -53,7 +53,7 @@
       {
         "pagePath": "pages/classify/classify",
         "iconPath": "images/icon-tab2.png",
-        "selectedIconPath": "images/icon-tab1-active.png",
+        "selectedIconPath": "images/icon-tab2-active.png",
         "text": "分类"
       },
       {

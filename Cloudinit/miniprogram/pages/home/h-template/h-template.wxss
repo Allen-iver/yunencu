@@ -1,8 +1,10 @@
 /* pages/home/h-template/h-template.wxss */
+@import "/template/template.wxss";
 
 #index_page {
   width: 100%;
   height: auto;
+  background-color: #ffffff;
 }
 
 /* 顶部轮播图 */
@@ -10,6 +12,8 @@
 #top-banner {
   background-color: white;
   position: relative;
+  width: 100%; 
+  height: 391rpx;
 }
 
 #top-banner swiper {
@@ -37,37 +41,60 @@
   top: 12rpx;
   z-index: 12;
   text-align: left;
+  overflow: hidden;
 }
 
 #top-banner .search_goods .search_input {
   display: block;
-  width: 100%;
+  width: 534rpx;
   height: 100%;
-  border: 1px solid red;
-  position: absolute;
+  margin-left: 80rpx;
+  font-size: 28rpx;
 }
 
-
-
-#top-banner .search_goods .search_input image {
+#top-banner .search_goods image {
   width: 26rpx;
   height: 28rpx;
   display: inline-block;
   position: absolute;
   left: 40rpx;
   top: 16rpx;
-  /* vertical-align: middle;
-  margin-left: 30rpx;
-  margin-right: 20rpx; */
 }
 
 /* placeholder默认颜色,大小 */
 #top-banner .search_goods .place-holder {
   color: #585858;
   font-size: 28rpx;
-  text-align: center;
 }
-/* #top-banner .search_goods .search_input text {
-  font-size: 28rpx;
-  color: #585858;
-} */
+
+/* 间距 */
+.jianju { width: 100%; margin: 0 auto; height: 20rpx; background-color: #f7f7f7; }
+
+/* 活动列表 */
+#tool_list { width: 100%; height: 200rpx; margin: 0 auto; }
+#tool_list .each_tool { width: 25%; height: auto; text-align: center; margin-top: 10rpx; }
+#tool_list .each_tool image { width: 133rpx; height: 133rpx; display: inline-block; }
+#tool_list .each_tool text { display: inline-block; width: 100%; text-align: center; font-size: 24rpx; color: #333333; }
+
+/* 二级活动列表 */
+.sec-level-list { width: 716rpx; margin: 0 auto; height: 256rpx;  }
+.each-sec-list { width: 166rpx; height: 218rpx; text-align: center; margin-top: 19rpx; }
+.each-sec-list .goods-name { font-size: 24rpx; color: #333333; display: block; margin-top: 12rpx; margin-bottom: 6rpx; }
+.each-sec-list .goods-desc { font-size: 18rpx; display: block; }
+.each-sec-list:nth-child(1) .goods-img { width: 140rpx; height: 66rpx; margin-top: 46rpx; }
+.each-sec-list:nth-child(2) .goods-img { width: 95rpx; height: 82rpx; margin-top: 38rpx; }
+.each-sec-list:nth-child(3) .goods-img { width: 82rpx; height: 106rpx; margin-top: 18rpx; }
+.each-sec-list:nth-child(4) .goods-img { width: 126rpx; height: 105rpx; margin-top: 16rpx; }
+
+
+
+
+
+
+
+
+
+
+
+
+

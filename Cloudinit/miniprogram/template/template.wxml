@@ -123,3 +123,23 @@
     <image src='https://ticket.qingnianjuhe.cn/Public/newwximg/nodata.png'></image>
   </view>
 </template>
+
+<!-- 商品列表数据-->
+<template name="is-goods-list">
+  <view class="is-goods-list">
+    <view class="toolTitle_t">
+      <text class="tooltitle">{{info.goodsModule.moduleName}}</text>
+      <image src="/images/left_jt.png" class="jiantou_left"></image>
+    </view>
+    <view class="goodsList_b df-jc-sa">
+      <block wx:for="{{info.goodsModule.moduleList}}" wx:key="key">
+        <navigator class="each_goods" hover-class="none">
+          <image src="{{item.goodsImg}}" class="goods_img"></image>
+          <text class="goods_name">{{item.goodsName}}</text>
+          <text class="goods_money">{{item.goodsPrice}}</text>
+        </navigator>
+      </block>
+    </view>
+
+  </view>
+</template>

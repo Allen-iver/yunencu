@@ -41,16 +41,6 @@ Page({
     let t = this;
     let user_res = t.data.info.appInfo;
     let openid = user_res.open_id;
-    // config.POST({
-    //   action_url: t.data.port.get_form_id,
-    //   params: {
-    //     formid: e.detail.formId,
-    //     openid: openid,
-    //   },
-    //   success: function (data) {
-    //     console.log(data);
-    //   }
-    // });
   },
   /**
    * 点击搜索触发
@@ -92,362 +82,153 @@ Page({
   // 左侧分类信息
   getClassify: function(id, index) {
     let t = this;
-    let list_left = [
-      {
+    let list_left = [{
         'list_left': [{
           'id': '1',
-          'name': '华为'
+          'name': '推荐分类'
         }, {
           'id': '2',
-          'name': '苹果'
+          'name': '母婴玩具'
         }, {
           'id': '3',
-          'name': '小米'
+          'name': '数码家电'
         }, {
           'id': '4',
-          'name': 'oppo'
+          'name': '营养保健'
         }, {
           'id': '5',
-          'name': 'vivo'
+          'name': '钟表'
         }, {
           'id': '6',
-          'name': '一加'
+          'name': '服饰奢品'
         }, {
           'id': '7',
-          'name': '魅族'
+          'name': '食品'
+        }, {
+          'id': '8',
+          'name': '家具用品'
         }],
 
         'list': {
           'level1': [{
-            'level2': {
-              'type': '1',
+              'name': '配件1',
               'list': [{
                   'goods_id': '1',
-                  'goods_name': '华为畅想10Plus',
-                  'original_img': 'http://g-search1.alicdn.com/img/bao/uploaded/i4/imgextra/i2/42958859/O1CN01M22xcQ2FJTJjNrdQd_!!0-saturn_solar.jpg_250x250.jpg'
+                  'goods_name': '笔记本',
+                  'original_img': '/images/pj01.png'
                 },
                 {
                   'goods_id': '2',
-                  'goods_name': '华为Mate30Pro',
-                  'original_img': 'http://g-search3.alicdn.com/img/bao/uploaded/i4/i3/2838892713/O1CN016OdGAv1Vub6CiMSDO_!!0-item_pic.jpg_250x250.jpg'
+                  'goods_name': '电脑周边',
+                  'original_img': '/images/pj02.png'
+                }
+              ]
+            },
+            {
+              'name': '配件2',
+              'list': [{
+                  'goods_id': '1',
+                  'goods_name': '书籍类',
+                  'original_img': '/images/pj03.png'
+                },
+                {
+                  'goods_id': '2',
+                  'goods_name': '数码相机',
+                  'original_img': '/images/pj04.png'
                 },
                 {
                   'goods_id': '3',
-                  'goods_name': '华为nova5',
-                  'original_img': 'http://g-search1.alicdn.com/img/bao/uploaded/i4/i3/2616970884/O1CN01mIKvLB1IOuh7fyELq_!!0-item_pic.jpg_250x250.jpg'
+                  'goods_name': 'T恤',
+                  'original_img': '/images/pj05.png'
+                },
+                {
+                  'goods_id': '4',
+                  'goods_name': '裤子',
+                  'original_img': '/images/pj06.png'
                 }
               ]
             }
 
-          }]
+          ]
         }
 
       },
       {
         'list_left': [{
           'id': '1',
-          'name': '华为'
+          'name': '推荐分类'
         }, {
           'id': '2',
-          'name': '苹果'
+          'name': '母婴玩具'
         }, {
           'id': '3',
-          'name': '小米'
+          'name': '数码家电'
         }, {
           'id': '4',
-          'name': 'oppo'
+          'name': '营养保健'
         }, {
           'id': '5',
-          'name': 'vivo'
+          'name': '钟表'
         }, {
           'id': '6',
-          'name': '一加'
+          'name': '服饰奢品'
         }, {
           'id': '7',
-          'name': '魅族'
+          'name': '食品'
+        }, {
+          'id': '8',
+          'name': '家具用品'
         }],
 
         'list': {
           'level1': [{
-            'level2': {
-              'type': '1',
+              'name': '配件1',
               'list': [{
                   'goods_id': '1',
-                  'goods_name': 'iphone 11',
-                  'original_img': 'http://g-search1.alicdn.com/img/bao/uploaded/i4/imgextra/i2/42958859/O1CN01M22xcQ2FJTJjNrdQd_!!0-saturn_solar.jpg_250x250.jpg'
+                  'goods_name': '笔记本2',
+                  'original_img': '/images/pj01.png'
                 },
                 {
                   'goods_id': '2',
-                  'goods_name': 'iphone 11 pro',
-                  'original_img': 'http://g-search3.alicdn.com/img/bao/uploaded/i4/i3/2838892713/O1CN016OdGAv1Vub6CiMSDO_!!0-item_pic.jpg_250x250.jpg'
+                  'goods_name': '电脑周边2',
+                  'original_img': '/images/pj02.png'
+                }
+              ]
+            },
+            {
+              'name': '配件2',
+              'list': [{
+                  'goods_id': '1',
+                  'goods_name': '书籍类2',
+                  'original_img': '/images/pj03.png'
+                },
+                {
+                  'goods_id': '2',
+                  'goods_name': '数码相机2',
+                  'original_img': '/images/pj04.png'
                 },
                 {
                   'goods_id': '3',
-                  'goods_name': 'iphone 11 max pro',
-                  'original_img': 'http://g-search1.alicdn.com/img/bao/uploaded/i4/i3/2616970884/O1CN01mIKvLB1IOuh7fyELq_!!0-item_pic.jpg_250x250.jpg'
+                  'goods_name': 'T恤2',
+                  'original_img': '/images/pj05.png'
+                },
+                {
+                  'goods_id': '4',
+                  'goods_name': '裤子2',
+                  'original_img': '/images/pj06.png'
                 }
               ]
             }
 
-          }]
+          ]
         }
 
-      },
-      {
-        'list_left': [{
-          'id': '1',
-          'name': '华为'
-        }, {
-          'id': '2',
-          'name': '苹果'
-        }, {
-          'id': '3',
-          'name': '小米'
-        }, {
-          'id': '4',
-          'name': 'oppo'
-        }, {
-          'id': '5',
-          'name': 'vivo'
-        }, {
-          'id': '6',
-          'name': '一加'
-        }, {
-          'id': '7',
-          'name': '魅族'
-        }],
+      }
 
-        'list': {
-          'level1': [{
-            'level2': {
-              'type': '1',
-              'list': [{
-                  'goods_id': '1',
-                  'goods_name': '小米8',
-                  'original_img': 'http://g-search1.alicdn.com/img/bao/uploaded/i4/imgextra/i2/42958859/O1CN01M22xcQ2FJTJjNrdQd_!!0-saturn_solar.jpg_250x250.jpg'
-                },
-                {
-                  'goods_id': '2',
-                  'goods_name': '小米9',
-                  'original_img': 'http://g-search3.alicdn.com/img/bao/uploaded/i4/i3/2838892713/O1CN016OdGAv1Vub6CiMSDO_!!0-item_pic.jpg_250x250.jpg'
-                },
-                {
-                  'goods_id': '3',
-                  'goods_name': '小米10',
-                  'original_img': 'http://g-search1.alicdn.com/img/bao/uploaded/i4/i3/2616970884/O1CN01mIKvLB1IOuh7fyELq_!!0-item_pic.jpg_250x250.jpg'
-                }
-              ]
-            }
-
-          }]
-        }
-
-      },
-      {
-        'list_left': [{
-          'id': '1',
-          'name': '华为'
-        }, {
-          'id': '2',
-          'name': '苹果'
-        }, {
-          'id': '3',
-          'name': '小米'
-        }, {
-          'id': '4',
-          'name': 'oppo'
-        }, {
-          'id': '5',
-          'name': 'vivo'
-        }, {
-          'id': '6',
-          'name': '一加'
-        }, {
-          'id': '7',
-          'name': '魅族'
-        }],
-
-        'list': {
-          'level1': [{
-            'level2': {
-              'type': '1',
-              'list': [{
-                'goods_id': '1',
-                'goods_name': 'oppor11',
-                'original_img': 'http://g-search1.alicdn.com/img/bao/uploaded/i4/imgextra/i2/42958859/O1CN01M22xcQ2FJTJjNrdQd_!!0-saturn_solar.jpg_250x250.jpg'
-              },
-              {
-                'goods_id': '2',
-                'goods_name': 'oppor12 pro',
-                'original_img': 'http://g-search3.alicdn.com/img/bao/uploaded/i4/i3/2838892713/O1CN016OdGAv1Vub6CiMSDO_!!0-item_pic.jpg_250x250.jpg'
-              },
-              {
-                'goods_id': '3',
-                'goods_name': 'oppor13 max pro',
-                'original_img': 'http://g-search1.alicdn.com/img/bao/uploaded/i4/i3/2616970884/O1CN01mIKvLB1IOuh7fyELq_!!0-item_pic.jpg_250x250.jpg'
-              }
-              ]
-            }
-
-          }]
-        }
-
-      },
-      {
-        'list_left': [{
-          'id': '1',
-          'name': '华为'
-        }, {
-          'id': '2',
-          'name': '苹果'
-        }, {
-          'id': '3',
-          'name': '小米'
-        }, {
-          'id': '4',
-          'name': 'oppo'
-        }, {
-          'id': '5',
-          'name': 'vivo'
-        }, {
-          'id': '6',
-          'name': '一加'
-        }, {
-          'id': '7',
-          'name': '魅族'
-        }],
-
-        'list': {
-          'level1': [{
-            'level2': {
-              'type': '1',
-              'list': [{
-                'goods_id': '1',
-                'goods_name': 'vivox11',
-                'original_img': 'http://g-search1.alicdn.com/img/bao/uploaded/i4/imgextra/i2/42958859/O1CN01M22xcQ2FJTJjNrdQd_!!0-saturn_solar.jpg_250x250.jpg'
-              },
-              {
-                'goods_id': '2',
-                'goods_name': 'vivox21 pro',
-                'original_img': 'http://g-search3.alicdn.com/img/bao/uploaded/i4/i3/2838892713/O1CN016OdGAv1Vub6CiMSDO_!!0-item_pic.jpg_250x250.jpg'
-              },
-              {
-                'goods_id': '3',
-                'goods_name': 'vivox31 max pro',
-                'original_img': 'http://g-search1.alicdn.com/img/bao/uploaded/i4/i3/2616970884/O1CN01mIKvLB1IOuh7fyELq_!!0-item_pic.jpg_250x250.jpg'
-              }
-              ]
-            }
-
-          }]
-        }
-
-      },
-      {
-        'list_left': [{
-          'id': '1',
-          'name': '华为'
-        }, {
-          'id': '2',
-          'name': '苹果'
-        }, {
-          'id': '3',
-          'name': '小米'
-        }, {
-          'id': '4',
-          'name': 'oppo'
-        }, {
-          'id': '5',
-          'name': 'vivo'
-        }, {
-          'id': '6',
-          'name': '一加'
-        }, {
-          'id': '7',
-          'name': '魅族'
-        }],
-
-        'list': {
-          'level1': [{
-            'level2': {
-              'type': '1',
-              'list': [{
-                'goods_id': '1',
-                'goods_name': '一加6',
-                'original_img': 'http://g-search1.alicdn.com/img/bao/uploaded/i4/imgextra/i2/42958859/O1CN01M22xcQ2FJTJjNrdQd_!!0-saturn_solar.jpg_250x250.jpg'
-              },
-              {
-                'goods_id': '2',
-                'goods_name': '一加6 pro',
-                'original_img': 'http://g-search3.alicdn.com/img/bao/uploaded/i4/i3/2838892713/O1CN016OdGAv1Vub6CiMSDO_!!0-item_pic.jpg_250x250.jpg'
-              },
-              {
-                'goods_id': '3',
-                'goods_name': '一加6T pro',
-                'original_img': 'http://g-search1.alicdn.com/img/bao/uploaded/i4/i3/2616970884/O1CN01mIKvLB1IOuh7fyELq_!!0-item_pic.jpg_250x250.jpg'
-              }
-              ]
-            }
-
-          }]
-        }
-
-      },
-      {
-        'list_left': [{
-          'id': '1',
-          'name': '华为'
-        }, {
-          'id': '2',
-          'name': '苹果'
-        }, {
-          'id': '3',
-          'name': '小米'
-        }, {
-          'id': '4',
-          'name': 'oppo'
-        }, {
-          'id': '5',
-          'name': 'vivo'
-        }, {
-          'id': '6',
-          'name': '一加'
-        }, {
-          'id': '7',
-          'name': '魅族'
-        }],
-
-        'list': {
-          'level1': [{
-            'level2': {
-              'type': '1',
-              'list': [{
-                'goods_id': '1',
-                'goods_name': '魅族 16th',
-                'original_img': 'http://g-search1.alicdn.com/img/bao/uploaded/i4/imgextra/i2/42958859/O1CN01M22xcQ2FJTJjNrdQd_!!0-saturn_solar.jpg_250x250.jpg'
-              },
-              {
-                'goods_id': '2',
-                'goods_name': '魅蓝e',
-                'original_img': 'http://g-search3.alicdn.com/img/bao/uploaded/i4/i3/2838892713/O1CN016OdGAv1Vub6CiMSDO_!!0-item_pic.jpg_250x250.jpg'
-              },
-              {
-                'goods_id': '3',
-                'goods_name': '魅族pro 8',
-                'original_img': 'http://g-search1.alicdn.com/img/bao/uploaded/i4/i3/2616970884/O1CN01mIKvLB1IOuh7fyELq_!!0-item_pic.jpg_250x250.jpg'
-              }
-              ]
-            }
-
-          }]
-        }
-
-      },
 
     ];
-    console.log(index);
+    // console.log(index);
 
-    console.log(list_left);
     switch (index) {
       case 0:
         list_left = list_left[0];
@@ -470,14 +251,17 @@ Page({
       case 6:
         list_left = list_left[6];
         break;
+      case 7:
+        list_left = list_left[7];
+        break;
     }
     t.setData({
       'info.leftClass': list_left,
       'info.index': index,
       'info.id': id
     })
-    console.log(t.data.info.leftClass);
-
+    // console.log(t.data.info.leftClass);
+    console.log(t.data);
   },
 
   // 选择分类信息

@@ -2,84 +2,58 @@
 <!-- 模板 -->
 <import src="./../../template/template.wxml" />
 <!-- 分类模板 -->
-<!-- classify-01 -->
-<template name='classify-01'>
-  <view id='classify-01'>
-    <!-- 搜索框 -->
-    <template is='search-01' data="{{info}}" />
-    <!-- 商品分类 -->
-    <view class='df-jc-sb bs-bb classify-info'>
-      <template is='left-classify-01' data="{{info}}" />
-      <template wx:if="{{info.leftClass.list.level1[0].level2.type == 1}}" is='right-goods-info-01' data="{{info}}" />
-      <template wx:else is='right-goods-info-02' data="{{info}}" />
+<template name="classifyModule">
+  <view class="classify-01">
+    <template is="searchModule" data="{{info}}" />
+    <view class="classify-info bs-bb df-jc-sb">
+      <template is="leftMenus" data="{{info}}" />
+      <template is="rightGoodsList" data="{{info}}" />
     </view>
   </view>
 </template>
-<!-- classify-01搜索框 -->
-<template name='search-01'>
-  <view id='search-01' class='df-ai-c df-jc-sa'>
-    <label>电商</label>
-    <view class='search-input bs-bb'>
-      <input placeholder='搜索商品' bindinput='realTimeSearch' onfirm-type='search' bindconfirm='search'></input>
-      <image bindtap='leftClickSearch'  src='../../images/sousuo01.png'></image>
+
+<!-- 搜索 -->
+<template name="searchModule">
+  <view class="searchHead">
+    <view class="search_t">
+      <input class="search_input" placeholder-class="place-holder" type="text" placeholder="搜索商品或店铺" />
+      <image class="search_img" src="/images/search_icon.png"></image>
     </view>
-    
   </view>
 </template>
-<!-- left-classify-01左侧商品分类 -->
-<template name='left-classify-01'>
-  <view id='left-classify-01'>
+
+<!-- 左侧列表 -->
+<template name="leftMenus">
+  <view id="left-classify-menu">
     <scroll-view scroll-y class='bs-bb'>
       <block wx:for="{{info.leftClass.list_left}}" wx:key="key">
-        <view data-index='{{index}}' data-id='{{item.id}}' class="lc-box replace {{index == info.index ? 'query-classify' : ''}}" bindtap='queryClassInfo'>
+        <view data-index='{{index}}' data-id='{{item.id}}' class="left-class-each {{index == info.index ? 'active-left-class' : ''}}" bindtap='queryClassInfo'>
           {{item.name}}
         </view>
       </block>
     </scroll-view>
   </view>
+
 </template>
-<!-- right-goods-info-01右侧商品信息二级分类 -->
-<template name='right-goods-info-01'>
-  <view id='right-goods-info-01'>
+
+<!-- 右侧商品列表 -->
+<template name="rightGoodsList">
+  <view class="right-goods-list">
     <scroll-view scroll-y>
-      <view class='rgi-box df-jc-sb'>
-        <block wx:for="{{info.leftClass.list.level1[0].level2.list}}" wx:key="key">
-          <navigator class='info replace' hover-class='none' url='/pages/goods-details/goods-details?id={{item.goods_id}}&status=2'>
-            <image src='{{item.original_img}}'></image>
-            <text>\n{{item.goods_name}}</text>
-          </navigator>
+      <view class='each_list'>
+        <block wx:for="{{info.leftClass.list.level1}}" wx:key wx:for-item="obj">
+          <view class="each_list_title">{{obj.name}}</view>
+          <view class="each_g_l df-jc-sb">
+            <block wx:for="{{info.leftClass.list.level1[index].list}}" wx:key>
+              <navigator class="each-g-s" hover-class="none">
+                <image src="{{item.original_img}}"></image>
+                <text>{{item.goods_name}}</text>
+              </navigator>
+            </block>
+          </view>
         </block>
       </view>
     </scroll-view>
   </view>
 </template>
-<!-- right-goods-info-02右侧商品信息三级分类 -->
-<template name='right-goods-info-02'>
-  <view id='right-goods-info-02'>
-    <scroll-view scroll-y>
-      <block wx:for="{{info.leftClass.list.level1[0].level2.list}}" wx:key="key" wx:for-item="obj">
-        <view class='rgi-box'>
-          <navigator class='more df-jc-sb' hover-class='none' url='/pages/goods-list/goods-list?id={{obj.id}}'>
-            <text>{{obj.name}}</text>
-            <view class='df-ai-c'>
-              <text>更多</text>
-              <image class='icon' src='../../images/youhuijiantou01.png'></image>
-            </view>
-          </navigator>
-          <view class='info-box df-jc-sb'>
-            <block wx:for="{{obj.level3.list}}" wx:key='key'>
-              <navigator wx:if="{{obj.level3.type === 0}}" class='info' hover-class='none' url='/pages/goods-list/goods-list?id={{obj.id}}&index={{index}}'>
-                <image src='{{info.domain_name}}{{item.module_nimg}}'></image>
-                <text>\n{{item.mobile_name}}</text>
-              </navigator>
-              <navigator wx:else class='info replace' hover-class='none' url='/pages/goods-details/goods-details?id={{item.goods_id}}&status=2'>
-                <image src='{{info.domain_name}}{{item.original_img}}'></image>
-                <text>\n{{item.goods_name}}</text>
-              </navigator>
-            </block>
-          </view>
-        </view>
-      </block>
-    </scroll-view>
-  </view>
-</template>
+
