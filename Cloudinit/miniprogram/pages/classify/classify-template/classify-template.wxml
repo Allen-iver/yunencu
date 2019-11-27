@@ -43,7 +43,7 @@
       <view class='each_list'>
         <block wx:for="{{info.leftClass.list.level1}}" wx:key wx:for-item="obj">
           <view class="each_list_title">{{obj.name}}</view>
-          <view class="each_g_l df-jc-sb">
+          <view class="each_g_l flex_start">
             <block wx:for="{{info.leftClass.list.level1[index].list}}" wx:key>
               <navigator class="each-g-s" hover-class="none">
                 <image src="{{item.original_img}}"></image>

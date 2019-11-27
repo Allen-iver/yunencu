@@ -67,9 +67,6 @@
   font-size: 28rpx;
 }
 
-/* 间距 */
-.jianju { width: 100%; margin: 0 auto; height: 20rpx; background-color: #f7f7f7; }
-
 /* 活动列表 */
 #tool_list { width: 100%; height: 200rpx; margin: 0 auto; }
 #tool_list .each_tool { width: 25%; height: auto; text-align: center; margin-top: 10rpx; }

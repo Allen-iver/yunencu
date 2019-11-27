@@ -93,13 +93,51 @@ Page({
     t.setData({
       'info.appInfo': app.user_info
     })
-    console.log(t.data.info.appInfo);
     // console.log(t.data.info.appInfo);
     t.getUserConf();//用户信息
     // t.getIndexList();//我的功能
     // t.getIndexList01();//我的功能
     // t.gethandle();//获取配置
     // t.qrcode();//推广二维码
+
+    t.goodModuleList();
+    
+  },
+
+  // 商品模板列表
+  goodModuleList() {
+    let t = this;
+    t.setData({
+      'info.goodsModule': {
+        'moduleName': '人气推荐',
+        'moduleList': [{
+          'goodsId': '1',
+          'goodsImg': '/images/goods01.png',
+          'goodsName': '女士白色长颈鹿T恤',
+          'goodsPrice': '¥' + '69.00'
+        },
+        {
+          'goodsId': '2',
+          'goodsImg': '/images/goods02.png',
+          'goodsName': '女式黑色长裤子',
+          'goodsPrice': '¥' + '21.60'
+        },
+        {
+          'goodsId': '3',
+          'goodsImg': '/images/goods01.png',
+          'goodsName': '女士白色长颈鹿T恤',
+          'goodsPrice': '¥' + '69.00'
+        },
+        {
+          'goodsId': '4',
+          'goodsImg': '/images/goods02.png',
+          'goodsName': '女式黑色长裤子',
+          'goodsPrice': '¥' + '21.60'
+        },
+        ]
+      }
+    })
+
   },
 
   // 获取formid

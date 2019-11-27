@@ -1,0 +1,10 @@
+/* pages/my-wallet/my-wallet.wxss */
+#my-wallet { width: 100%; height: auto; margin: 0 auto; }
+.wallet-bg { width: 690rpx; height: 327rpx; margin: 0 auto; margin-top: 32rpx; position: relative; }
+.wallet-bg .img-bg { width: 690rpx; height: 327rpx;  }
+
+
+
+
+
+

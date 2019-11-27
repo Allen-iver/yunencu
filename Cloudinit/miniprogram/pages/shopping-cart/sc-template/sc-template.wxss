@@ -1,120 +1,81 @@
 /* pages/shopping-car/sc-template/sc-template.wxss */
-/* 购物车暂无数据 */
-#no-data-01{
-  text-align: center;
-}
-#no-data-01 .bg{
-  line-height: 90rpx;
-  margin-top: 80rpx;
-  color: #979797;
-}
-#no-data-01 .bg image{
-  width: 100rpx;
-  height: 100rpx;
-  display: block;
-  margin: 0 auto;
-}
-#no-data-01 .nav{
-  background-color: rgb(249,194,95);
-  color: white;
-  width: 250rpx;
-  height: 65rpx;
-  line-height: 65rpx;
-  border-radius: 10rpx;
-  margin: 20rpx auto;
-}
-/* 商品信息 */
-#goods-list-01 .g-box{
-  height: 235rpx;
-  background-color: white;
-  margin-top: 20rpx;
-}
-#goods-list-01 .g-box .icons{
-  height: 100%;
-  position: relative;
-  width: 135rpx;
-}
-#goods-list-01 .g-box .icons image{
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto;
-  width: 50rpx;
-  height: 50rpx;
-}
-#goods-list-01 .goods-img image{
-  width: 150rpx;
-  height: 150rpx;
-}
-#goods-list-01 .goods-info{
-  height: 150rpx;
-  width: 375rpx;
-  margin-left: 40rpx;
-  line-height: 50rpx;
-  font-size: 20rpx;
-}
-#goods-list-01 .add-subtract{
-  margin-right: 15rpx;
-  border: 1rpx solid #ABABAB;
-  height: 40rpx;
-}
-#goods-list-01 .add-subtract .add{
-  border-right: 1rpx solid #ABABAB;
-}
-#goods-list-01 .add-subtract .subtract{
-  border-left: 1rpx solid #ABABAB;
-}
-#goods-list-01 .add-subtract .add,#goods-list-01 .add-subtract .subtract{
-  padding: 0 20rpx;
-  height: 40rpx;
-  line-height: 40rpx;
-}
-#goods-list-01 .add-subtract .num{
-  padding: 0 20rpx;
-}
-#goods-list-01 .goods-price{
-  color: #E21D15;
-}
-/* 合计#total-01 */
-#total-01{
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: white;
-  height: 100rpx;
-  padding-left: 50rpx;
-}
+/* 顶部商品 */
+.shopping-store { width: 100%; height: auto; }
+.shopping-store .store-name { width: 100%; height: 78rpx; line-height: 78rpx; background-color: #ffffff; }
+.shopping-store .store-name .store-son { width: 708rpx; height: 78rpx; line-height: 78rpx; margin: 0 auto; }
+.shopping-store .store-name .store-son image { width: 32rpx; height: 32rpx; vertical-align: middle; margin-right: 12rpx; margin-top: -2rpx; }
+.shopping-store .store-name .store-son text { font-size: 32rpx; color: #282828; }
 
-#total-01 .c5D5D5D{
-  font-size: 22rpx;
-  margin-left: 10rpx;
-}
-#total-01 .price{
-  margin-left: 50rpx;
-}
-#total-01 form button .submit{
-  background-color: rgb(244,145,46);
-  color: white;
-  text-align: center;
-  height: 100%;
-  font-size: 30rpx;
-  line-height: 100rpx;
-  width: 200rpx;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
-#total-01 .sd{
-  margin-left: 35rpx;
-}
-#total-01 .sd image {
-  width: 30rpx;
-  height: 30rpx;
-  margin-right: 15rpx;
-}
-#total-01 .icon{width: 50rpx;height: 50rpx;}
+.shopping-store .store-list { width: 100%; height: 230rpx; background-color: #ffffff; border-top: 2rpx solid #f7f7f7; }
+.shopping-store .store-list .each-goods { width: 708rpx; height: 230rpx; margin: 0 auto; position: relative;  }
+.shopping-store .store-list .each-goods .e-left { width: 240rpx; height: 186rpx; line-height: 186rpx; position: absolute; left: 0; top: 50%; margin-top: -93rpx;  }
+.shopping-store .store-list .each-goods .e-left .status-img { margin-top: -2rpx; margin-right: 19rpx; width: 32rpx; height: 32rpx; vertical-align: middle; }
+.shopping-store .store-list .each-goods .e-left .goods-img { margin-top: -2rpx;  width: 183rpx; height: 183rpx; vertical-align: middle; }
+.shopping-store .store-list .each-goods .e-middle { width: 266rpx; height: 186rpx; position: absolute; left: 256rpx; top: 50%; margin-top: -93rpx;  }
+.shopping-store .store-list .each-goods .e-middle .e-g-name { width: 266rpx; font-size: 28rpx; color: #282828; font-weight: bold;  }
+.shopping-store .store-list .each-goods .e-middle .e-g-desc { display: inline-block; font-size: 28rpx; color: #707070;  }
+.shopping-store .store-list .each-goods .e-middle .e-g-money { position: absolute; left: 0; bottom: 4rpx; width: 266rpx; font-size: 37rpx; color: #fc5051;  }
+.shopping-store .store-list .each-goods .e-right { width: 176rpx; height: 186rpx; position: absolute; right: 0; top: 50%; margin-top: -93rpx;  }
+.shopping-store .store-list .each-goods .e-right .e-g-count { width: 176rpx; text-align: right; font-size: 28rpx; color: #282828; display: inline-block; }
+.shopping-store .store-list .each-goods .e-right .e-g-operat { position: absolute; bottom: 4rpx; right: 0; width: 100%; height: 48rpx; border: 2rpx solid #dcdcdc; border-radius: 8rpx; color: #3f3f3f;   }
+.shopping-store .store-list .each-goods .e-right .e-g-operat .e-g-add { display: inline-block; width: 46rpx; text-align: center; }
+.shopping-store .store-list .each-goods .e-right .e-g-operat .e-g-num { display: inline-block; width: 80rpx; text-align: center; border-left: 2rpx solid #dcdcdc; border-right: 2rpx solid #dcdcdc; font-size: 32rpx;}
+.shopping-store .store-list .each-goods .e-right .e-g-operat .e-g-subtract { display: inline-block; width: 46rpx; text-align: center;  }
 
-button.form_button{background-color:transparent;padding:0;margin:0;display:inline;position:static;border:0;padding-left:0;padding-right:0;border-radius:0;font-size:0rpx;color:transparent;}
-button.form_button::after{content:'';width:0;height:0;-webkit-transform:scale(1);transform:scale(1);display:none;background-color:transparent;}
+/* 购物车底部结算 */
+.bottom-calcu-price { background-color: #ffffff; width: 100%; height: 102rpx; border-top: 2rpx solid #dcdcdc; position: fixed; bottom: 0; left: 0; z-index: 99999;  }
+.bottom-calcu-price .b-g-left { width: 120rpx; height: 102rpx; line-height: 102rpx; position: absolute; left: 24rpx; top: 50%; margin-top: -51rpx; }
+.bottom-calcu-price .b-g-left image { width: 32rpx; height: 32rpx; vertical-align: middle; margin-top: -2rpx; margin-right: 20rpx; }
+.bottom-calcu-price .b-g-left text { font-size: 28.13rpx; color: #707070; }
+
+.bottom-calcu-price .b-g-mid { width: 350rpx; height: 102rpx; position: absolute; right: 270rpx; top: 50%; margin-top: -51rpx; text-align: right; }
+.bottom-calcu-price .b-g-mid .b-g-count { font-size: 32.82rpx; color: #333333; margin-top: 8rpx;  }
+.bottom-calcu-price .b-g-mid .b-g-count text { color: #fc5051; }
+.bottom-calcu-price .b-g-mid .b-g-discount {  font-size: 24rpx; color: #707070; }
+
+.bottom-calcu-price .b-g-right { width: 240rpx; height: 102rpx; line-height: 102rpx; text-align: center; font-size: 32rpx; color: #ffffff;
+  position: absolute; right: 0; top: 50%; margin-top: -51rpx; background-color: #fc5051; 
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

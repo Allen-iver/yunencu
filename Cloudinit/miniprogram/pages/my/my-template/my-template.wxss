@@ -1,96 +1,56 @@
 /* pages/my/my-template/my-template.wxss */
 /* 用户信息#user-info-01 */
-#user-info-01{
-  height: 335rpx;
-  position: relative;
-  text-align: center;
-}
-#user-info-01 .ui-box{
-  display: inline-block;
-  margin-top: 12rpx;
-}
-#user-info-01 .ui-box .u-img{
-  width: 150rpx;
-  height: 150rpx;
-  border-radius: 50%;
-  z-index: 10;
-}
-#user-info-01 .ui-box .u-name{
-  color: white;
-  font-size: 30rpx;
-  z-index: 10;
-  margin-top: 0rpx;
-}
-#user-info-01 .ug-box{padding: 23rpx 33rpx 20rpx 33rpx;border-top: 2rpx solid rgb(153,153,153);color: white;}
-#user-info-01 .user-growth .ug-box:nth-child(2){border-right: 2rpx solid rgb(153,153,153);border-left: 2rpx solid rgb(153,153,
-153);}
-#user-info-01 .user-growth .df-fw-w{position: absolute;bottom: 0;}
-/* 功能导航#nav-bar-01 */
-#nav-bar-01{
-  margin-top: 50rpx;
-  padding: 0 70rpx;
-}
-#nav-bar-01 .top-share{
-  text-align: center;
-  background-color: #FC8E20;
-  color: white;
-  font-size: 32rpx;
-  padding: 20rpx 0;
-  margin-bottom: 30rpx;
-  border-radius: 15rpx;
-}
-#nav-bar-01 .nav-list .nav-title{
-  text-align: center;
-  position: relative;
-  font-size: 32rpx;
-  
-}
-#nav-bar-01 .nav-list .nav-title::before{
-  content: '';
-  position: absolute;
-  width: 35%;
-  height: 3rpx;
-  background-color:black;
-  left: 0;
-  bottom: 8rpx;
-}
-#nav-bar-01 .nav-list .nav-title::after{
-  content: '';
-  position: absolute;
-  width: 35%;
-  height: 3rpx;
-  background-color:black;
-  bottom: 8rpx;
-  right: 0;
-}
-#nav-bar-01 .nav-functions{
-  padding: 35rpx 0 15rpx 0;
-}
-#nav-bar-01 .nav-functions-box{
-  text-align: center;
-  width: 150rpx;
-  line-height: 70rpx;
-}
-#nav-bar-01 .nav-functions-box image{
-  width: 70rpx;
-  height: 70rpx;
-}
-#nav-bar-01 .nav-functions-boxs{
-  margin-left: 45rpx;
-  padding: 13rpx 0;
-}
-#nav-bar-01 .nav-functions-boxs image{
-  width: 39rpx;
-  height: 38rpx;
-  margin-right: 30rpx;
-}
-#nav-bar-01 .technical-support{margin-top: 20rpx;margin-bottom: 20rpx;}
-/* 分享二维码 */
-#my-share{width: 100%;height: 100%;position: absolute;top: 0;left: 0;}
-#my-share .hint{position: fixed;z-index: 2000;color: white;font-size: 32rpx;text-align: center;width: 100%;top: 300rpx;}
-#my-share image{width: 250rpx;height: 250rpx;position: absolute;right: 0;left: 0;top: 300rpx;margin: 0 auto;z-index: 1000;}
-#my-share .hint .i-see{margin-top: 50rpx;}
+.userinfo-top { width: 100%; height: 194rpx; margin: 0 auto; overflow: hidden; position: relative;  }
+.info-bg { width: 100%; height: 194rpx; margin: 0 auto; position: relative; z-index: 100; }
+.info-bg .img-bg { width: 100%; height: 100%; }
+.info-bg .user-img { width: 120rpx; height: 120rpx; position: absolute; left: 24rpx; top: 50%; margin-top: -66rpx; border-radius: 50%; }
+.info-bg .user-img image { width: 100%; height: 100%; }
+.info-bg .user-desc { width: 230rpx; height: 120rpx;  position: absolute; left: 168rpx; top: 50%; margin-top: -66rpx;  }
+.info-bg .user-desc .user-name { font-size: 32rpx; color: #ffffff;  }
+.info-bg .user-desc text { width: 99rpx; display: inline-block; font-size: 20rpx; color: #ffffff; border: 2rpx solid #ffffff; height: 40rpx; line-height: 40rpx; text-align: center; border-radius: 8rpx; margin-top: 12rpx; }
+.info-bg .user-desc .user-level { margin-right: 24rpx; }
+.info-bg .user-qrcode { width: 80rpx; height: 80rpx; position: absolute; right: 24rpx; top: 50rpx; }
+.info-bg .user-qrcode image { width: 100%; height: 100%; }
 
-/* 推送默认样式 */
-button.form_button{background-color:transparent;padding:0;margin:0;display:inline;position:static;border:0;padding-left:0;padding-right:0;border-radius:0;font-size:0rpx;color:transparent;}
-button.form_button::after{content:'';width:0;height:0;-webkit-transform:scale(1);transform:scale(1);display:none;background-color:transparent;}
+/* 订单功能模块 */
+.my-orders { width: 100%; height: 150rpx; margin: 0 auto; background-color: #ffffff; position: relative;  }
+.my-orders .order-son-list { width: 594rpx; height: 150rpx; position: absolute; left: 0; top: 0; }
+.my-orders .order-son-list .order-menu { width: 25%; height: 150rpx; text-align: center; }
+.my-orders .order-son-list .order-menu text { margin-top: 12rpx; display: inline-block; width: 100%; color: #707070; font-size: 24rpx; }
+.my-orders .order-son-list .order-menu image { margin-top: 40rpx; }
+.my-orders .order-son-list:nth-child(1) .order-menu image { width: 42rpx; height: 36rpx; }
+.my-orders .order-son-list:nth-child(2) .order-menu image { width: 42rpx; height: 34rpx; }
+.my-orders .order-son-list:nth-child(3) .order-menu image { width: 41rpx; height: 38rpx; }
+.my-orders .order-son-list:nth-child(4) .order-menu image { width: 36rpx; height: 42rpx; }
+.my-orders .order-fa { position: absolute; right: 0; top: 0; width: 155rpx; height: 150rpx;  }
+.my-orders .order-fa .left-line { width: 14rpx; height: 83rpx; position: absolute; left: 0; bottom: 32rpx;  }
+.my-orders .order-fa .order-con { width: 155rpx; height: 150rpx; text-align: center; }
+.my-orders .order-fa .order-con image { width: 38rpx; height: 44rpx; display: inline-block; margin-top: 32rpx; }
+.my-orders .order-fa .order-con text { margin-top: 12rpx; display: inline-block; width: 100%; color: #707070; font-size: 24rpx; }  
+
+/* 钱包功能模块 */
+.my-package { width: 100%; height: 150rpx; margin: 0 auto; background-color: #ffffff; position: relative;  }
+.my-package .package-son-list { width: 594rpx; height: 150rpx; position: absolute; left: 0; top: 0; }
+.my-package .package-son-list .package-menu { width: 25%; height: 150rpx; text-align: center; }
+.my-package .package-son-list .package-menu .ph-fir { width: 108rpx; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; margin-top: 30rpx; display: inline-block; color: #fe6c71; font-size: 32rpx; }
+.my-package .package-son-list .package-menu .ph-sec { margin-top: 2rpx; display: inline-block; width: 100%; color: #707070; font-size: 24rpx;  }
+.my-package .package-fa { position: absolute; right: 0; top: 0; width: 155rpx; height: 150rpx;  }
+.my-package .package-fa .left-line { width: 14rpx; height: 83rpx; position: absolute; left: 0; bottom: 32rpx;  }
+.my-package .package-fa .package-con { width: 155rpx; height: 150rpx; text-align: center; }
+.my-package .package-fa .package-con image { width: 38rpx; height: 44rpx; display: inline-block; margin-top: 36rpx; }
+.my-package .package-fa .package-con text { margin-top: 12rpx; display: inline-block; width: 100%; color: #707070; font-size: 24rpx; }  
+
+/* 我的功能管理模块 */
+.my-tools { width: 100%; height: 350rpx; margin: 0 auto; background-color: #ffffff; }
+.my-tools .each-tools { width: 25%; height: 110rpx; text-align: center; }
+.my-tools .each-tools image { width: 60rpx; height: 60rpx; display: inline-block; margin-top: 30rpx; }
+.my-tools .each-tools text { width: 100%; color: #333333; font-size: 24rpx; display: inline-block; margin-top: 18rpx; }
+
+
+
+
+        
+
+
+
+

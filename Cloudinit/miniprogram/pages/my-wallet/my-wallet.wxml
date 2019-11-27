@@ -1,0 +1,17 @@
+<!--pages/my-wallet/my-wallet.wxml-->
+<view id="my-wallet">
+  <view class="w-690">
+    <view class="wallet-bg">
+      <image class="img-bg" src="/images/wallet-bg.png"></image>
+      <view class="account-text">账户余额</view>
+      <view class="account-mon">
+        <text>￥</text>0.00
+      </view>
+    </view>
+      
+    <view>
+
+    </view>
+
+  </view>
+</view>

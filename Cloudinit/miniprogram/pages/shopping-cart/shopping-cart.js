@@ -29,25 +29,43 @@ Page({
     t.setData({
       'info.appInfo': app.user_info
     })
+    t.goodModuleList();
   },
-  // 获取formid
-  // submitInfo: function (e) {
-  //   console.log('GG 敌方军团已同意投降 4票赞成 0票反对')
-  //   let t = this;
-  //   let user_res = t.data.info.appInfo;
-  //   console.log(user_res);
-  //   let openid = user_res.open_id;
-  //   config.POST({
-  //     action_url: t.data.port.get_form_id,
-  //     params: {
-  //       formid: e.detail.formId,
-  //       openid: openid,
-  //     },
-  //     success: function (data) {
-  //       console.log(data);
-  //     }
-  //   });
-  // },
+  // 商品模板列表
+  goodModuleList() {
+    let t = this;
+    t.setData({
+      'info.goodsModule': {
+        'moduleName': '人气推荐',
+        'moduleList': [{
+          'goodsId': '1',
+          'goodsImg': '/images/goods01.png',
+          'goodsName': '女士白色长颈鹿T恤',
+          'goodsPrice': '¥' + '69.00'
+        },
+        {
+          'goodsId': '2',
+          'goodsImg': '/images/goods02.png',
+          'goodsName': '女式黑色长裤子',
+          'goodsPrice': '¥' + '21.60'
+        },
+        {
+          'goodsId': '3',
+          'goodsImg': '/images/goods01.png',
+          'goodsName': '女士白色长颈鹿T恤',
+          'goodsPrice': '¥' + '69.00'
+        },
+        {
+          'goodsId': '4',
+          'goodsImg': '/images/goods02.png',
+          'goodsName': '女式黑色长裤子',
+          'goodsPrice': '¥' + '21.60'
+        },
+        ]
+      }
+    })
+
+  },
 
   launchAppError: function(e) {
     console.log(e.detail)

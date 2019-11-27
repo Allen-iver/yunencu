@@ -283,8 +283,8 @@
 .is-goods-list .goodsList_b .each_goods .goods_name {text-indent: 1em; font-size: 28rpx; color: #333333; display: inline-block; margin-top: 26rpx; width: 290rpx; overflow: hidden;white-space: nowrap;text-overflow: ellipsis; }
 .is-goods-list .goodsList_b .each_goods .goods_money {text-indent: 1em; font-size: 32rpx; color: #fc5051; display: inline-block; margin-top: 36rpx; }
 
-
-
+/* 间距 */
+.jianju { width: 100%; margin: 0 auto; height: 20rpx; background-color: #f7f7f7; }
 
 
 

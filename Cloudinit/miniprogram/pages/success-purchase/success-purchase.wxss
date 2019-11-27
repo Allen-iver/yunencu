@@ -1,0 +1,15 @@
+/* pages/success-purchase/success-purchase.wxss */
+#success-purchase { width: 100%; height: auto; background-color: #ffffff; }
+.success-purch { width: 690rpx; height: auto; margin: 0 auto; text-align: center; }
+.success-purch .success-icon { display: inline-block; width: 200rpx; height: 200rpx; margin-top: 74rpx; }
+.success-purch .success-text { display: inline-block; width: 100%; font-size: 40rpx; text-align: center; margin-top: 52rpx; }
+.success-purch .return-index { display: inline-block; width: 100%; height: 88rpx; line-height: 88rpx; text-align: center; margin-top: 142rpx; background-color: #fd5151; color: #ffffff; font-size: 36rpx; border-radius: 12rpx; }
+.success-purch .check-order { display: inline-block; width: 100%; height: 88rpx; line-height: 88rpx; text-align: center; margin-top: 30rpx; border: 2rpx solid #d6d5d6; background-color: #fbfafc; color: #000000; font-size: 36rpx; border-radius: 12rpx; }
+
+
+
+
+
+
+
+

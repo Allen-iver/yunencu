@@ -1,15 +1,7 @@
 <!--pages/shopping-cart/shopping-cart.wxml-->
 <!-- 模板 -->
-<import src='./../../template/template.wxml' />
-<!-- 购物车模板 -->
 <import src='./sc-template/sc-template.wxml' />
-<!-- 购物车 -->
-<view id='shopping-car' class='page-all'>
-  <template is='shopping-car-01' data="{{info}}" />
-  <!-- 确认取消提示框 -->
-  <template wx:if='{{popupWindowFlag}}' is='popup-window' data='{{msg}}' />
-  <!-- 技术支持 -->
-  <view class="technical-support {{info.carList.length <= 3 ? 'btm' : 'mt'}}">
-    <template is="technical-support" />
-  </view>
+
+<view id="shopping-cart">
+  <template is="shopping-cart-01" data="{{info}}" />
 </view>

@@ -25,6 +25,7 @@ button::after{
   border: none;
 }
 
+.w-690 { width: 690rpx; height: auto; margin: 0 auto; }
 
 /* 所有页面样式 */
 page{
@@ -130,6 +131,12 @@ image {
 .df-fw-w {
   display: flex;
   flex-flow: row wrap;
+}
+
+/* 从左至右一次换行 */
+.flex_start {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .df-jc-sa {

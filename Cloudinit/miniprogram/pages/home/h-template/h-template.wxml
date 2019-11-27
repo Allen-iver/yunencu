@@ -56,8 +56,5 @@
   </view>
 </template>
 
-<!-- 间距 -->
-<template name="jianju">
-  <view class="jianju"></view>
-</template>
+
 

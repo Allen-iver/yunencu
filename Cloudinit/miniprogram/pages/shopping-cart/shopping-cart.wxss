@@ -1,6 +1,5 @@
 /* pages/shopping-cart/shopping-cart.wxss */
 @import "./sc-template/sc-template.wxss";
-#shopping-car{padding-bottom: 120rpx;}
-#shopping-car .btm{position: absolute;bottom: 140rpx;}
-#shopping-car .mt{margin-top: 20rpx;}
-#shopping-car .technical-support{width: 100%;}
+#shopping-cart { width: 100%; height: auto; overflow: hidden; background-color: #ffffff; }
+
+

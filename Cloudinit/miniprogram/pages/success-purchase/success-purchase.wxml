@@ -1,0 +1,9 @@
+<!--pages/success-purchase/success-purchase.wxml-->
+<view id="success-purchase">
+  <view class="success-purch">
+    <image class="success-icon" src="/images/success_icon.png"></image>
+    <text class="success-text">购买成功</text>
+    <navigator class="return-index" src="" hover-class="none">返回首页</navigator>
+    <navigator class="check-order" src="" hover-class="none">查看订单</navigator>
+  </view>
+</view>

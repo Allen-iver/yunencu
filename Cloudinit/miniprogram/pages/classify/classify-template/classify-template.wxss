@@ -21,7 +21,7 @@
 .right-goods-list scroll-view .each_list .each_list_title:nth-child(1) { margin-top: 10rpx;}
 .right-goods-list scroll-view .each_list .each_list_title { font-size: 26rpx; color: #333333; margin-top: 30rpx; padding-left: 12rpx; margin-bottom: 40rpx;  }
 .right-goods-list scroll-view .each_list .each_g_l { width: 100%; height: auto;}
-.right-goods-list scroll-view .each_list .each_g_l .each-g-s { width: 30%; height: 178rpx;  text-align: center; position: relative; margin-bottom: 10rpx; }
+.right-goods-list scroll-view .each_list .each_g_l .each-g-s { width: 33%; height: 178rpx;  text-align: center; position: relative; margin-bottom: 10rpx; }
 .right-goods-list scroll-view .each_list .each_g_l .each-g-s text { width: 100%; font-size: 26rpx; color: #797979; position: absolute; left: 50%; margin-left: -50%; bottom: 6rpx; overflow: hidden;white-space: nowrap;text-overflow: ellipsis; }
 .right-goods-list scroll-view .each_list .each_g_l .each-g-s image { width: 146rpx; height: 124rpx;  }
 
