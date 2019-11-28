@@ -1,6 +1,8 @@
 {
   "pages": [
+    "pages/add-address/add-address",
     "pages/home/home",
+    "pages/my-wallet/my-wallet",
     "pages/success-purchase/success-purchase",
     "pages/my/my",
     "pages/shopping-cart/shopping-cart",

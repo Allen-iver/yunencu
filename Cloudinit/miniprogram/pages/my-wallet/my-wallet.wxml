@@ -8,10 +8,9 @@
         <text>￥</text>0.00
       </view>
     </view>
-      
-    <view>
-
-    </view>
-
+    
+    <navigator class="red-btn" src="" hover-class="none">充值</navigator>
+    <navigator class="gray-btn" src="" hover-class="none">提现</navigator>
+    
   </view>
 </view>
